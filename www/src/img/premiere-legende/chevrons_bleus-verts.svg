@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="170.07874"
+   height="99.212593"
+   id="svg2"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="chevrons_bleus-verts.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="710"
+     id="namedview13"
+     showgrid="false"
+     inkscape:zoom="9.3603706"
+     inkscape:cx="150.50709"
+     inkscape:cy="9.8822816"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3048" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3044" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3040" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3048-3" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     d="m 170.0852,-0.15361748 0,99.15255048 -40.71092,-49.576275 z"
+     id="path3046"
+     style="fill:#000080;fill-rule:evenodd;stroke:none"
+     inkscape:connector-curvature="0" />
+  <path
+     d="m 129.35192,-0.15361748 0,99.15255048 L 88.641,49.422658 z"
+     id="path3046-7"
+     style="fill:#000080;fill-rule:evenodd;stroke:none"
+     inkscape:connector-curvature="0" />
+  <path
+     d="m 0.29793114,-0.11596364 0,99.15256064 L 41.00884,49.460317 z"
+     id="path3046-71"
+     style="fill:#006c53;fill-opacity:1;fill-rule:evenodd;stroke:none"
+     inkscape:connector-curvature="0" />
+  <path
+     d="m 41.03121,-0.11596364 0,99.15256064 40.71092,-49.57628 z"
+     id="path3046-7-6"
+     style="fill:#006c53;fill-opacity:1;fill-rule:evenodd;stroke:none"
+     inkscape:connector-curvature="0" />
+</svg>

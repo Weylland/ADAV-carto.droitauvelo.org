@@ -1,0 +1,29 @@
+VVV_shema / Véloroute voie verte en projet
+
+VVV_veloroute / section de Véloroute
+
+vvv_voieverte / voie verte avec revétement lisse
+
+vvv_voieverte_avec_revetement_rugueux / voie verte avec revétement rugueux
+
+gare_SNCF / Gares et haltes ferroviaires
+
+bikepark / Abris à vélos, sécurisés
+
+bicycle_rental_VLS_bleu / Loueurs de vélos
+
+legende_magasin_reparation_logo_rouge_grand / Vélocistes et ateliers réparations
+
+legende_droitauvelo / Antenne de Droit au Vélo
+
+legende_sosvelo / Points SOS vélo
+
+legende_magasin_de_sport / magasin d'article de sport
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="81.496063"
+   height="99.212593"
+   id="svg2">
+  <defs
+     id="defs4">
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3048" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3044" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3040" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3048-3" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     d="M 0,0.06004927 0,99.2126 40.710914,49.636325 z"
+     id="path3046"
+     style="fill:#b00000;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+  <path
+     d="m 40.733282,0.06004927 0,99.15255073 40.710915,-49.576275 z"
+     id="path3046-7"
+     style="fill:#b00000;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+</svg>
