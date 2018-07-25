@@ -1,8 +1,7 @@
 <script src="src/js/jquery-1.11.1.min.js"></script>
 <script src="src/js/config.js"></script>
 <!-- leaflet js files -->
-<script src="src/js/leaflet.js"></script>
-
+<script src="src/js/leaflet2.js"></script>
 <!-- Leaflet marker cluster plugin -->
 <script src="src/js/leaflet.markercluster.js"></script>
 <script src="src/js/leaflet.markercluster.layersupport.js"></script>

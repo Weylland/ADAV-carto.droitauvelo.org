@@ -12,8 +12,8 @@
 	<link rel="stylesheet" href="src/css/leaflet-routing-machine.css" />
 	<link rel="stylesheet" href="src/css/font-awesome.css">
 	<link rel="stylesheet" href="src/css/leaflet-sidebar.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="src/css/style.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="src/css/MarkerCluster.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="src/css/style.css" />
 </head>
 <body>
 	<!-- Carto Map -->

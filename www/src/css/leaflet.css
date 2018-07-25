@@ -171,24 +171,46 @@
 
 /* cursors */
 
-.leaflet-clickable {
+/* cursors */
+
+.leaflet-interactive {
 	cursor: pointer;
 	}
-.leaflet-container {
+.leaflet-grab {
 	cursor: -webkit-grab;
 	cursor:    -moz-grab;
+	}
+.leaflet-crosshair,
+.leaflet-crosshair .leaflet-interactive {
+	cursor: crosshair;
 	}
 .leaflet-popup-pane,
 .leaflet-control {
 	cursor: auto;
 	}
-.leaflet-dragging .leaflet-container,
-.leaflet-dragging .leaflet-clickable {
+.leaflet-dragging .leaflet-grab,
+.leaflet-dragging .leaflet-grab .leaflet-interactive,
+.leaflet-dragging .leaflet-marker-draggable {
 	cursor: move;
 	cursor: -webkit-grabbing;
 	cursor:    -moz-grabbing;
 	}
 
+/* marker & overlays interactivity */
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-image-layer,
+.leaflet-pane > svg path,
+.leaflet-tile-container {
+	pointer-events: none;
+	}
+
+.leaflet-marker-icon.leaflet-interactive,
+.leaflet-image-layer.leaflet-interactive,
+.leaflet-pane > svg path.leaflet-interactive {
+	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	pointer-events: auto;
+	}
 
 /* visual tweaks */
 

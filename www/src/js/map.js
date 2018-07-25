@@ -189,7 +189,7 @@ var generateMapFailure = function(error) {
   loadMap(); 
 }
 
-if (localhost) {
+if (localhostUrl) {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
      generateMapSucess,
