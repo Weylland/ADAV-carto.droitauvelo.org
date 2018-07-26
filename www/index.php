@@ -253,6 +253,11 @@
 						<i class="fa fa-file"></i>
 					</a>
 				</li>
+				<li>
+					<a data-toggle="modal" data-target="#myModal" alt="Légendes" title="Légendes">
+						<i class="fa fa-info"></i>
+					</a>
+				</li>
 				<!-- <li><a href="#itineraire" role="tab" alt="Calculateur d'itinéraire" title="Calculateur d'itinéraire"><i class="fa fa-road"></i></a></li> -->
 				<li>
 					<a href="#recherche" role="tab" alt="Recherche" title="Recherche">
@@ -264,11 +269,11 @@
 						<i class="fa fa-users"></i>
 					</a>
 				</li>
-				<li>
-					<a data-toggle="modal" data-target="#myModal" alt="Légendes" title="Légendes">
-						<i class="fa fa-info"></i>
+				<!--<li>
+					<a href="#impressions" role="tab" alt="Impressions de la carte" title="Impressions de la carte">
+						<i class="fa fa-print"></i>
 					</a>
-				</li>
+				</li>-->
 			</ul>
 			<ul role="tablist">
 			</ul>
@@ -293,10 +298,10 @@
 					<br>
 					<br>
 					<a href="http://droitauvelo.org">
-						<P align="center">
+						<p align="center">
 							<img class="img-responsive" src="src/img/adav.jpg" alt="ADAV" />
 					</a>
-					</P>
+					</p>
 					<br>
 					<br>
 					<b>
@@ -441,6 +446,14 @@
 					</div>
 				</div>
 			</div>
+			<!--<div class="sidebar-pane" id="impressions">
+				<h1 class="sidebar-header">Imprimer la Cartes
+					<span class="sidebar-close">
+						<i class="fa fa-close"></i>
+					</span>
+				</h1>
+				<button type"button" class="btn" onclick="printPortrait()">Portrait</button>
+			</div>-->
 		</div>
 		<!-- js files -->
 		<?php include('src/php/jsFiles.php'); ?>

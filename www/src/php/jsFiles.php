@@ -7,8 +7,7 @@
 <script src="src/js/leaflet.markercluster.layersupport.js"></script>
 
 <!-- Leaflet print plugin -->
-<!--<script src="src/js/leaflet.browser.print.js"></script>-->
-
+<script src="src/js/leaflet.browser.print.js"></script>
 <!-- Leaflet search plugin -->
 <script src="leaflet-search/js/leaflet-search.js"></script>
 
