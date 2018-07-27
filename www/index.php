@@ -269,11 +269,11 @@
 						<i class="fa fa-users"></i>
 					</a>
 				</li>
-				<!--<li>
+				<li>
 					<a href="#impressions" role="tab" alt="Impressions de la carte" title="Impressions de la carte">
 						<i class="fa fa-print"></i>
 					</a>
-				</li>-->
+				</li>
 			</ul>
 			<ul role="tablist">
 			</ul>
@@ -300,13 +300,14 @@
 					<a href="http://droitauvelo.org">
 						<p align="center">
 							<img class="img-responsive" src="src/img/adav.jpg" alt="ADAV" />
+						</p>
 					</a>
-					</p>
 					<br>
 					<br>
 					<b>
 						<center>Cette carte permet de représenter l’ensemble des informations utiles aux déplacements des cyclistes quotidiens mais
-							aussi aux cyclotouristes de passage dans la région.</center>
+							aussi aux cyclotouristes de passage dans la région.
+						</center>
 					</b>
 					<br>
 					<br>
@@ -374,9 +375,11 @@
 				<br>
 				<p>
 					<b>
-						<center>Cochez et décochez les différentes couches pour les faire apparaitre sur la carte puis cliquez sur les emplacements
-							ou les routes pour obtenir plus d'informations</b>
-					</center>
+						<center>
+							Cochez et décochez les différentes couches pour les faire apparaitre sur la carte puis cliquez sur les emplacements
+							ou les routes pour obtenir plus d'informations
+						</center>
+					</b>
 				</p>
 				<br>
 				<div id="fond"></div>
@@ -446,14 +449,14 @@
 					</div>
 				</div>
 			</div>
-			<!--<div class="sidebar-pane" id="impressions">
+			<div class="sidebar-pane" id="impressions">
 				<h1 class="sidebar-header">Imprimer la Cartes
 					<span class="sidebar-close">
 						<i class="fa fa-close"></i>
 					</span>
 				</h1>
 				<button type"button" class="btn" onclick="printPortrait()">Portrait</button>
-			</div>-->
+			</div>
 		</div>
 		<!-- js files -->
 		<?php include('src/php/jsFiles.php'); ?>

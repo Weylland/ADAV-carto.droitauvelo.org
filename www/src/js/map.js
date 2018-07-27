@@ -121,14 +121,13 @@ var loadMap = function () {
 var generateMapSucess  = function(position) {
   map = new L.Map("map", {
     zoom: 9,
-    center: [50.6146, 3.0652],
+    center: [position.coords.latitude, position.coords.longitude],
     layers: [hillShade, OSMBlackWhite, route],
     maxBounds: mapBox,
-    minZoom: 9
+    minZoom: 14
   });
   loadMap(); 
 }
-
 var generateMapFailure = function(error) {
   map = new L.Map("map", {
     zoom: 9,
@@ -160,58 +159,3 @@ if (localhostUrl) {
   map = new L.Map("map");
   loadMap();
 }
-// Print
-/*var mapTiles = {
-  'OSMBlackWhite': OSMBlackWhite,
-  'OSMHumanity': OSMHumanity,
-  'OSMCycleMap': OSMCycleMap,
-  'EsriWorldImagery': EsriWorldImagery,
-}
-var mapLayers = {
-  'route': route,
-  'gares': gares,
-  'magasinsport': magasinsport,
-  'magasinvelo': magasinvelo,
-  'abrivelo': abrivelo,
-  'antennesadav': antennesadav,
-  'locationvelo': locationvelo,
-  'sos': sos,
-  'points_durs': points_durs,
-  'mbTiles': mbTiles
-}
-L.control.browserPrint(mapLayers, mapTiles).addTo(map);
-var printPortrait = function() {
-
-}*/
-  
-// Marker cluster
-/*var mcg = L.markerClusterGroup.layerSupport().addTo(map);
-mcg.checkIn([
-  gares,
-]);*/
-// Calculateur d'itinéraires //
-// var control = L.Routing.control({
-//  waypoints: [
-//    L.latLng(50.6146,3.0652),
-//    L.latLng(50.6146,4.0652)
-//  ],
-//  router: L.Routing.graphHopper('f4b9217d-8a01-4e8c-8525-86abf96b2b55' , {
-//    urlParameters: {
-//      vehicle: 'bike',
-//      locale: 'fr',
-//    }
-//  }),
-//  routeWhileDragging: true
-// }).addTo(map);
-
-// var routeBlock = control.onAdd(map);
-// document.getElementById('controls').appendChild(routeBlock);
-
-// console.log(hash)
-// if (hash.map._loaded !== true) {
-//   if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition(
-//      generateMapSucess,
-//      generateMapFailure)
-//   }
-// }
