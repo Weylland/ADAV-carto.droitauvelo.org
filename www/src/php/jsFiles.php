@@ -3,12 +3,12 @@
 <!-- leaflet js files -->
 <script src="src/js/leaflet2.js"></script>
 <!-- Leaflet marker cluster plugin -->
-<script src="src/js/leaflet.markercluster.js"></script>
-<script src="src/js/leaflet.markercluster.layersupport.js"></script>
+<!-- <script src="src/js/leaflet.markercluster.js"></script>
+<script src="src/js/leaflet.markercluster.layersupport.js"></script> -->
 
 <!-- Leaflet print plugin -->
-<script src="src/js/leaflet.browser.print.js"></script>
-<!-- Leaflet search plugin -->
+<script src="src/js/leaflet.browser.print.js"></script> -->
+<!-- Leaflet search plugin-->
 <script src="leaflet-search/js/leaflet-search.js"></script>
 
 <!-- Leaflet sidebar plugin -->
@@ -42,6 +42,6 @@
 <![endif]-->
 
 <!-- Calculateur d'itinéraire bétâ -->
-<script src="src/js/leaflet-routing-machine.js"></script>
+<!-- <script src="src/js/leaflet-routing-machine.js"></script>
 <script src="src/js/graphhopper.js"></script>
-<script src="src/js/geocoder.js"></script>
+<script src="src/js/geocoder.js"></script> -->

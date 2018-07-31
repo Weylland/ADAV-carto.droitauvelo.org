@@ -47,9 +47,9 @@ var baseLayers = {
 };
 var overlays = {
   "Aménagements cyclables de la région": mbTiles,
+  "Véloroutes et voies vertes de la région": route,
   // "Ombrage du relief": hillShade,
   // "Courbes de niveau": elevation,
-  "Véloroutes et voies vertes de la région": route,
   "Gares et haltes ferroviaires": gares,
   "Abris à vélo, sécurisés": abrivelo,
   "Antennes de l'ADAV - Droit au vélo": antennesadav,
@@ -69,6 +69,36 @@ var map;
 
 var loadMap = function () {
   layersCard();
+  // Print
+  // var mapTiles = {
+  //   'OSMBlackWhite': OSMBlackWhite,
+  //   'OSMHumanity': OSMHumanity,
+  //   'OSMCycleMap': OSMCycleMap,
+  //   'EsriWorldImagery': EsriWorldImagery,
+  // }
+  // var mapLayers = {
+  //   'mbTiles': mbTiles,
+  //   'route': route,
+  //   'gares': gares,
+  //   'abrivelo': abrivelo,
+  //   'antennesadav': antennesadav,
+  //   'sos': sos,
+  //   'magasinvelo': magasinvelo,
+  //   'locationvelo': locationvelo,
+  //   'magasinsport': magasinsport,
+  //   'travaux': travaux,
+  //   'points_durs': points_durs,
+  // }
+  // L.control.browserPrint({
+  //   mapTiles,
+  //   mapLayers, 
+  //   printModes: ["Portrait", "Landscape", "Custom"],
+  //   printModesNames: {Portrait: "Portrait", Landscape: "Paysage", Custom: "Personnalisé"},
+  //   printLayer: null
+  // }).addTo(map);
+  // var printPortrait = function() {
+  //   L.control.browserPrint.mode.landscape();
+  // }
   // FullHash
   var allMapLayers = {
     'grise': OSMBlackWhite,
@@ -84,7 +114,8 @@ var loadMap = function () {
     'location_velo': locationvelo,
     'sos_velo': sos,
     'points_durs': points_durs,
-    'amenagements_cyclables': mbTiles
+    'amenagements_cyclables': mbTiles,
+    'zones_travaux': travaux
   };
   var hash = new L.Hash(map, allMapLayers);
 
@@ -120,11 +151,11 @@ var loadMap = function () {
 
 var generateMapSucess  = function(position) {
   map = new L.Map("map", {
-    zoom: 9,
+    zoom: 14,
     center: [position.coords.latitude, position.coords.longitude],
     layers: [hillShade, OSMBlackWhite, route],
     maxBounds: mapBox,
-    minZoom: 14
+    minZoom: 9
   });
   loadMap(); 
 }
@@ -159,3 +190,5 @@ if (localhostUrl) {
   map = new L.Map("map");
   loadMap();
 }
+
+

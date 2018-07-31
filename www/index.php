@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="src/css/leaflet-routing-machine.css" />
 	<link rel="stylesheet" href="src/css/font-awesome.css">
 	<link rel="stylesheet" href="src/css/leaflet-sidebar.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="src/css/MarkerCluster.css" />
+	<!--<link rel="stylesheet" type="text/css" media="screen" href="src/css/MarkerCluster.css" />-->
 	<link rel="stylesheet" type="text/css" media="screen" href="src/css/style.css" />
 </head>
 <body>
@@ -269,11 +269,11 @@
 						<i class="fa fa-users"></i>
 					</a>
 				</li>
-				<li>
+				<!-- <li>
 					<a href="#impressions" role="tab" alt="Impressions de la carte" title="Impressions de la carte">
 						<i class="fa fa-print"></i>
 					</a>
-				</li>
+				</li> -->
 			</ul>
 			<ul role="tablist">
 			</ul>
@@ -455,12 +455,12 @@
 						<i class="fa fa-close"></i>
 					</span>
 				</h1>
-				<button type"button" class="btn" onclick="printPortrait()">Portrait</button>
+				<button id='leaflet-browser-print--manualMode-button' type"button" class="btn" onclick="printPortrait();">Portrait</button>
 			</div>
 		</div>
 		<!-- js files -->
 		<?php include('src/php/jsFiles.php'); ?>
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			$('.modal-dialog').draggable();
 			$('.modal').resizable({
 				//alsoResize: ".modal-dialog",
@@ -493,6 +493,6 @@
 					$('#dialog').dialog(overlayDialogObj).show();
 				});
 			});
-		</script>
+		</script> -->
 </body>
 </html>
