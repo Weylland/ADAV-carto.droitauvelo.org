@@ -69,36 +69,13 @@ var map;
 
 var loadMap = function () {
   layersCard();
-  // Print
-  // var mapTiles = {
-  //   'OSMBlackWhite': OSMBlackWhite,
-  //   'OSMHumanity': OSMHumanity,
-  //   'OSMCycleMap': OSMCycleMap,
-  //   'EsriWorldImagery': EsriWorldImagery,
-  // }
-  // var mapLayers = {
-  //   'mbTiles': mbTiles,
-  //   'route': route,
-  //   'gares': gares,
-  //   'abrivelo': abrivelo,
-  //   'antennesadav': antennesadav,
-  //   'sos': sos,
-  //   'magasinvelo': magasinvelo,
-  //   'locationvelo': locationvelo,
-  //   'magasinsport': magasinsport,
-  //   'travaux': travaux,
-  //   'points_durs': points_durs,
-  // }
-  // L.control.browserPrint({
-  //   mapTiles,
-  //   mapLayers, 
-  //   printModes: ["Portrait", "Landscape", "Custom"],
-  //   printModesNames: {Portrait: "Portrait", Landscape: "Paysage", Custom: "Personnalisé"},
-  //   printLayer: null
-  // }).addTo(map);
-  // var printPortrait = function() {
-  //   L.control.browserPrint.mode.landscape();
-  // }
+  // Layers controls //
+  var panelLayers = L.control.layers(baseLayers, overlays);
+  panelLayers.addTo(map);
+  document.getElementById('fond').appendChild(panelLayers.onAdd(map));
+  $("#fond").addClass("leaflet-control-layers-expanded")
+
+
   // FullHash
   var allMapLayers = {
     'grise': OSMBlackWhite,
@@ -121,6 +98,7 @@ var loadMap = function () {
 
   // Sidebar
   var sidebar = L.control.sidebar('sidebar').addTo(map);
+
   // Search 
   map.addControl(new L.Control.Search({
     url: 'https://nominatim.openstreetmap.org/search?format=json&q={s}',
@@ -135,17 +113,38 @@ var loadMap = function () {
     minLength: 2
   }));
 
-  // Layers controls //
-  var panelLayers = L.control.layers(baseLayers, overlays);
-  panelLayers.addTo(map);
-  document.getElementById('fond').appendChild(panelLayers.onAdd(map));
-  $("#fond").addClass("leaflet-control-layers-expanded")
-
   // Echelle //
   L.control.scale({
     metric: true,
     imperial: false,
     position: 'bottomright'
+  }).addTo(map);
+
+  // Print
+  var mapTiles = {
+    'OSMBlackWhite': OSMBlackWhite,
+    'OSMHumanity': OSMHumanity,
+    'OSMCycleMap': OSMCycleMap,
+    'EsriWorldImagery': EsriWorldImagery,
+  }
+  var mapLayers = {
+    'mbTiles': mbTiles,
+    'route': route,
+    'gares': gares,
+    'abrivelo': abrivelo,
+    'antennesadav': antennesadav,
+    'sos': sos,
+    'magasinvelo': magasinvelo,
+    'locationvelo': locationvelo,
+    'magasinsport': magasinsport,
+    'travaux': travaux,
+    'points_durs': points_durs,
+  }
+  L.control.browserPrint({
+    mapTiles,
+    mapLayers, 
+    printModes: ["Portrait", "Landscape", "Custom"],
+    printModesNames: {Portrait: "Portrait", Landscape: "Paysage", Custom: "Personnalisé"},
   }).addTo(map);
 }
 

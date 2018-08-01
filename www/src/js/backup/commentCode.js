@@ -31,6 +31,7 @@
 // mcg.checkIn([
 //   gares,
 // ]);
+
 // Calculateur d'itinéraires //
 // var control = L.Routing.control({
 //  waypoints: [
@@ -48,6 +49,8 @@
 
 // var routeBlock = control.onAdd(map);
 // document.getElementById('controls').appendChild(routeBlock);
+
+// code philippe
 
 // console.log(hash)
 // if (hash.map._loaded !== true) {
