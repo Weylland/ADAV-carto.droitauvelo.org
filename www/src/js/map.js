@@ -75,7 +75,6 @@ var loadMap = function () {
   document.getElementById('fond').appendChild(panelLayers.onAdd(map));
   $("#fond").addClass("leaflet-control-layers-expanded")
 
-
   // FullHash
   var allMapLayers = {
     'grise': OSMBlackWhite,
@@ -95,6 +94,31 @@ var loadMap = function () {
     'zones_travaux': travaux
   };
   var hash = new L.Hash(map, allMapLayers);
+
+  // Print
+  var mapTiles = {
+    'OSMBlackWhite': OSMBlackWhite,
+    'OSMHumanity': OSMHumanity,
+    'OSMCycleMap': OSMCycleMap,
+    'EsriWorldImagery': EsriWorldImagery,
+  }
+  var mapLayers = {
+    'route': route,
+    'gares': gares,
+    'magasinsport': magasinsport,
+    'magasinvelo': magasinvelo,
+    'abrivelo': abrivelo,
+    'antennesadav': antennesadav,
+    'locationvelo': locationvelo,
+    'sos': sos,
+    'points_durs': points_durs,
+    'mbTiles': mbTiles
+  }
+  L.control.browserPrint({
+    mapLayers, 
+    mapTiles,
+    printModes: ["Portrait", "Landscape", "Custom"]
+  }).addTo(map);
 
   // Sidebar
   var sidebar = L.control.sidebar('sidebar').addTo(map);
@@ -118,33 +142,6 @@ var loadMap = function () {
     metric: true,
     imperial: false,
     position: 'bottomright'
-  }).addTo(map);
-
-  // Print
-  var mapTiles = {
-    'OSMBlackWhite': OSMBlackWhite,
-    'OSMHumanity': OSMHumanity,
-    'OSMCycleMap': OSMCycleMap,
-    'EsriWorldImagery': EsriWorldImagery,
-  }
-  var mapLayers = {
-    'mbTiles': mbTiles,
-    'route': route,
-    'gares': gares,
-    'abrivelo': abrivelo,
-    'antennesadav': antennesadav,
-    'sos': sos,
-    'magasinvelo': magasinvelo,
-    'locationvelo': locationvelo,
-    'magasinsport': magasinsport,
-    'travaux': travaux,
-    'points_durs': points_durs,
-  }
-  L.control.browserPrint({
-    mapTiles,
-    mapLayers, 
-    printModes: ["Portrait", "Landscape", "Custom"],
-    printModesNames: {Portrait: "Portrait", Landscape: "Paysage", Custom: "Personnalisé"},
   }).addTo(map);
 }
 
@@ -186,8 +183,9 @@ if (localhostUrl) {
     loadMap();
   }
 } else {
-  map = new L.Map("map");
+  map = new L.Map("map", {
+    minZoom: 9,
+    maxBounds: mapBox,
+  });
   loadMap();
 }
-
-
