@@ -279,10 +279,10 @@ var layersCard = function () {
         style: function (features) {
             switch (features.properties.Type_voie) {
                 case '0': return { color: "#9B9995", dashArray: "1, 5" };
-                case '1': return { color: "#FA0069" };
-                case '2': return { color: "#006428" };
-                case '3': return { color: "#8BC21A" };
-                case '4': return { color: "#FFD700" };
+                case '1': return { color: "#853894" };  // A527A9
+                case '2': return { color: "#036635" }; // 006428
+                case '3': return { color: "#8BC21A" }; // 8BC21A
+                case '4': return { color: "#853894", dashArray: "1, 5" };
             }
             return features.properties;
         },

@@ -65,12 +65,14 @@ amenities = Points(
 	    "bicycle_parking",
 	    "bicycle_rental",
         ),
-	'bicycle_parking': ( 'shed', 'building', ),
+	'bicycle_parking': ( 'shed', 'building', )
 	},
 	fields = (
 		('access', String()),
 		('bicycle_parking', String()),
 		('operator', String()),
+		('barrier', String()),
+		('cycleway', String())
 	),
 )
 
@@ -146,6 +148,7 @@ equipements = LineStrings(
 		'route' : ('bicycle'),
 		'network' : ('lcn','rcn','ncn',),
 		'maxspeed': ('20','30'),
+		'operator': ('VNF')
         },
     fields = (
 			('cycleway', String()),
@@ -164,7 +167,9 @@ equipements = LineStrings(
 			('route', String()),
 			('network', String()),
 			('area', String()),
-			('railway', String())
+			('railway', String()),
+			('operator', String()),
+			('motor_vehicle', String())
         ),
 )
 
