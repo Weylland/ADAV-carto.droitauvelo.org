@@ -14,8 +14,9 @@
 <script src="src/js/config.js"></script>
 <!-- leaflet js files -->
 <script src="src/js/leaflet2.js"></script>
-<!-- Leaflet marker cluster plugin -->
-<!-- <script src="src/js/leaflet.markercluster.js"></script>
+<script src="src/js/leaflet-fullHash.js"></script>
+<!-- Leaflet marker cluster plugin
+<script src="src/js/leaflet.markercluster.js"></script>
 <script src="src/js/leaflet.markercluster.layersupport.js"></script> -->
 
 <!-- Leaflet print plugin -->
@@ -26,9 +27,13 @@
 <!-- Leaflet sidebar plugin -->
 <script src="src/js/leaflet-sidebar.js"></script>
 <script src="src/js/leaflet.ajax.min.js"></script>
-<script src="src/js/leaflet-fullHash.js"></script>
 <script src="src/js/bootstrap.min.js"></script>
 <script src="src/js/font-awesome.js"></script>
+
+<!-- Calculateur d'itinéraire bétâ -->
+<script src="src/js/leaflet-routing-machine.js"></script>
+<script src="src/js/Control.Geocoder.js"></script>
+<script src="src/js/lrm-graphhopper.js"></script>
 
 <!-- Script Map -->
 <script src="src/js/layersCard.js" type="text/javascript"></script>
@@ -40,8 +45,3 @@
 <script src="src/js/html5shiv.js"></script>
 <script src="src/js/respond.min.js"></script>
 <![endif]-->
-
-<!-- Calculateur d'itinéraire bétâ -->
-<!-- <script src="src/js/leaflet-routing-machine.js"></script>
-<script src="src/js/graphhopper.js"></script>
-<script src="src/js/geocoder.js"></script> -->

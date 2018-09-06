@@ -163,6 +163,8 @@ equipements = LineStrings(
 			('maxspeed', Integer()),
 			('route', String()),
 			('network', String()),
+			('area', String()),
+			('railway', String())
         ),
 )
 

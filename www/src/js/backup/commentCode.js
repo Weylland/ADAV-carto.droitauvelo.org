@@ -1,30 +1,9 @@
 // Print
-// var mapTiles = {
-//   'OSMBlackWhite': OSMBlackWhite,
-//   'OSMHumanity': OSMHumanity,
-//   'OSMCycleMap': OSMCycleMap,
-//   'EsriWorldImagery': EsriWorldImagery,
-// }
-// var mapLayers = {
-//   'route': route,
-//   'gares': gares,
-//   'magasinsport': magasinsport,
-//   'magasinvelo': magasinvelo,
-//   'abrivelo': abrivelo,
-//   'antennesadav': antennesadav,
-//   'locationvelo': locationvelo,
-//   'sos': sos,
-//   'points_durs': points_durs,
-//   'mbTiles': mbTiles
-// }
 // L.control.browserPrint({
-//   mapLayers, 
+//   mapLayers,
 //   mapTiles,
 //   printModes: ["Portrait", "Landscape", "Custom"]
 // }).addTo(map);
-// var printPortrait = function() {
-//   L.control.browserPrint.mode.landscape(mapLayers, mapTiles);
-// }
 
 // Marker cluster
 // var mcg = L.markerClusterGroup.layerSupport().addTo(map);
@@ -60,3 +39,45 @@
 //      generateMapFailure)
 //   }
 // }
+
+// $(".modal-dialog").draggable();
+// $(".modal").resizable({
+//   //alsoResize: ".modal-dialog",
+//   minHeight: 300,
+//   minWidth: 300
+// });
+// $("#myModal").on("show.bs.modal", function() {
+//   $(this)
+//     .find(".modal-body")
+//     .css({
+//       "max-height": "100%"
+//     });
+// });
+// $(function() {
+//   $("#accordion")
+//     .accordion()
+//     .hide();
+//   $("#clicker")
+//     .button()
+//     .click(function() {
+//       var overlayDialogObj = {
+//         autoOpen: true,
+//         height: 400,
+//         width: 310,
+//         modal: false,
+//         open: function() {
+//           $("#accordion")
+//             .accordion({ heightStyle: "fill", collapsible: true })
+//             .show();
+//         },
+//         buttons: {
+//           Done: function() {
+//             $(this).dialog("close");
+//           }
+//         }
+//       };
+//       $("#dialog")
+//         .dialog(overlayDialogObj)
+//         .show();
+//     });
+// });

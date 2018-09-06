@@ -1,4 +1,3 @@
-var map
 var hillShade = new L.TileLayer("https://c.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png", {
   maxZoom: 17,
   attribution: 'Tuiles de fond <a href="https://www.openstreetmap.org/" target="_blank">OSM.org</a>',
@@ -26,6 +25,7 @@ var mbTiles = new L.tileLayer('https://carto.droitauvelo.org/mbtiles-server/mbti
   attribution: 'Équipement vélo <a href="https://www.droitauvelo.org" target="_blank">ADAV</a>',
   opacity: 0.7
 });
+
 
 var route = new L.LayerGroup();
 var gares = new L.LayerGroup();
@@ -69,11 +69,20 @@ var map;
 
 var loadMap = function () {
   layersCard();
-  // Layers controls //
+  // Layers controls 
   var panelLayers = L.control.layers(baseLayers, overlays);
   panelLayers.addTo(map);
   document.getElementById('fond').appendChild(panelLayers.onAdd(map));
   $("#fond").addClass("leaflet-control-layers-expanded")
+
+  // Print
+  L.control.browserPrint({
+    printModes: [
+      L.control.browserPrint.mode.landscape("Paysage"),
+      L.control.browserPrint.mode.portrait("Portrait"),
+      L.control.browserPrint.mode.custom("Personnalisé"),
+    ]
+  }).addTo(map);
 
   // FullHash
   var allMapLayers = {
@@ -94,31 +103,6 @@ var loadMap = function () {
     'zones_travaux': travaux
   };
   var hash = new L.Hash(map, allMapLayers);
-
-  // Print
-  var mapTiles = {
-    'OSMBlackWhite': OSMBlackWhite,
-    'OSMHumanity': OSMHumanity,
-    'OSMCycleMap': OSMCycleMap,
-    'EsriWorldImagery': EsriWorldImagery,
-  }
-  var mapLayers = {
-    'route': route,
-    'gares': gares,
-    'magasinsport': magasinsport,
-    'magasinvelo': magasinvelo,
-    'abrivelo': abrivelo,
-    'antennesadav': antennesadav,
-    'locationvelo': locationvelo,
-    'sos': sos,
-    'points_durs': points_durs,
-    'mbTiles': mbTiles
-  }
-  L.control.browserPrint({
-    mapLayers, 
-    mapTiles,
-    printModes: ["Portrait", "Landscape", "Custom"]
-  }).addTo(map);
 
   // Sidebar
   var sidebar = L.control.sidebar('sidebar').addTo(map);
@@ -142,7 +126,69 @@ var loadMap = function () {
     metric: true,
     imperial: false,
     position: 'bottomright'
-  }).addTo(map);
+  }).addTo(map);  
+}
+
+var routing = function () {
+  var control = L.Routing.control({
+    waypoints: [],
+    routeWhileDragging: true,
+    reverseWaypoints: true,
+    router: L.Routing.graphHopper('1d460f42-2220-4fcf-8eff-454cac1ae99f', {
+        urlParameters: {
+            vehicle: 'bike',
+            locale: 'fr',
+        }
+    }),
+    geocoder: L.Control.Geocoder.bing('AtwDxrwRVqkTV73gq13SdD0qo7DQFYGRQT-WR0pPb0JS_eVLkKq2okV_MR2qLRlz'),
+    suggest: L.Control.Geocoder.bing('AtwDxrwRVqkTV73gq13SdD0qo7DQFYGRQT-WR0pPb0JS_eVLkKq2okV_MR2qLRlz')
+  });
+  
+  function createButton(label, container) {
+    var btn = L.DomUtil.create('button', '', container);
+    btn.setAttribute('type', 'button');
+    btn.innerHTML = label;
+    return btn;
+  }
+
+  var removeRoute = document.getElementById("removeRoute");
+  var addRoute = document.getElementById("addRoute");
+
+  var addRouteF = function () {
+    control.addTo(map);
+    addRoute.style.display = "none";
+    removeRoute.style.display = "block";
+    var popupRoute = map.on('click', function(e) {
+      var container = L.DomUtil.create('div'),
+          startBtn = createButton('Départ', container),
+          destBtn = createButton('Arrivée', container);
+    
+      L.DomEvent.on(startBtn, 'click', function() {
+          control.spliceWaypoints(0, 1, e.latlng);
+          map.closePopup();
+      });
+      
+      L.DomEvent.on(destBtn, 'click', function() {
+          control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
+          map.closePopup();
+      });
+    
+      L.popup()
+          .setContent(container)
+          .setLatLng(e.latlng)
+          .openOn(map);
+    });
+  }
+  
+  var removeRouteF = function () {
+    control.remove(map);
+    removeRoute.style.display = "none";
+    addRoute.style.display = "block";
+    map.off('click');
+  }
+
+  addRoute.addEventListener("click", addRouteF);
+  removeRoute.addEventListener("click", removeRouteF);
 }
 
 var generateMapSucess  = function(position) {
@@ -153,7 +199,8 @@ var generateMapSucess  = function(position) {
     maxBounds: mapBox,
     minZoom: 9
   });
-  loadMap(); 
+  loadMap();
+  routing();
 }
 var generateMapFailure = function(error) {
   map = new L.Map("map", {
@@ -163,7 +210,8 @@ var generateMapFailure = function(error) {
     maxBounds: mapBox,
     minZoom: 9
   });
-  loadMap(); 
+  loadMap();
+  routing();
 }
 
 if (localhostUrl) {
@@ -181,6 +229,7 @@ if (localhostUrl) {
       minZoom: 9
     });
     loadMap();
+    routing();
   }
 } else {
   map = new L.Map("map", {
@@ -188,4 +237,5 @@ if (localhostUrl) {
     maxBounds: mapBox,
   });
   loadMap();
+  routing();
 }

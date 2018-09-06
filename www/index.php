@@ -254,11 +254,21 @@
 					</a>
 				</li>
 				<li>
-					<a data-toggle="modal" data-target="#myModal" alt="Légendes" title="Légendes">
+					<a id="showLegend" data-toggle="modal" data-target="#myModal" alt="Légendes" title="Légendes">
+						<i class="fa fa-info"></i>
+					</a>
+					<a id="hideLegend" data-toggle="modal" data-target="#myModal" alt="Légendes" title="Légendes">
 						<i class="fa fa-info"></i>
 					</a>
 				</li>
-				<!-- <li><a href="#itineraire" role="tab" alt="Calculateur d'itinéraire" title="Calculateur d'itinéraire"><i class="fa fa-road"></i></a></li> -->
+				<li>
+					<a id="addRoute" role="tab" alt="Calculateur d'itinéraire" title="Calculateur d'itinéraire">
+						<i class="fa fa-road" ></i>
+					</a>
+					<a id="removeRoute" role="tab" alt="Calculateur d'itinéraire" title="Calculateur d'itinéraire">
+						<i class="fa fa-road" ></i>
+					</a>
+				</li>
 				<li>
 					<a href="#recherche" role="tab" alt="Recherche" title="Recherche">
 						<i class="fa fa-search"></i>
@@ -269,11 +279,6 @@
 						<i class="fa fa-users"></i>
 					</a>
 				</li>
-				<!-- <li>
-					<a href="#impressions" role="tab" alt="Impressions de la carte" title="Impressions de la carte">
-						<i class="fa fa-print"></i>
-					</a>
-				</li> -->
 			</ul>
 			<ul role="tablist">
 			</ul>
@@ -460,39 +465,5 @@
 		</div>
 		<!-- js files -->
 		<?php include('src/php/jsFiles.php'); ?>
-		<!-- <script type="text/javascript">
-			$('.modal-dialog').draggable();
-			$('.modal').resizable({
-				//alsoResize: ".modal-dialog",
-				minHeight: 300,
-				minWidth: 300
-			});
-			$('#myModal').on('show.bs.modal', function () {
-				$(this).find('.modal-body').css({
-					'max-height': '100%'
-				});
-			});
-			$(function () {
-				$("#accordion").accordion().hide();
-				$('#clicker').button().click(function () {
-					var overlayDialogObj = {
-						autoOpen: true,
-						height: 400,
-						width: 310,
-						modal: false,
-						open: function () {
-							$('#accordion').accordion(
-								{ heightStyle: "fill", collapsible: true }).show();
-						},
-						buttons: {
-							'Done': function () {
-								$(this).dialog('close');
-							}
-						}
-					};
-					$('#dialog').dialog(overlayDialogObj).show();
-				});
-			});
-		</script> -->
 </body>
 </html>
