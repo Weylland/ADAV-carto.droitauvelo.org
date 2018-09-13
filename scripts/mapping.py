@@ -143,7 +143,7 @@ equipements = LineStrings(
 			    'sharrow',
 			    ),
 		'bicycle': ('yes','designated',),
-		'highway': ('pedestrian','cycleway','footway','living_street','track'),
+		'highway': ('pedestrian','cycleway','footway','living_street','track', 'service'),
 		'oneway:bicycle' : ('no','yes','-1','1',),
 		'route' : ('bicycle'),
 		'network' : ('lcn','rcn','ncn',),

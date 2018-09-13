@@ -61,7 +61,7 @@ var overlays = {
   "Points durs référencés avec les collectivités partenaires": points_durs,
   // "ADAV itineraire": itineraireadav
 };
-var southWest = L.latLng(49.2391208, 0.0878906);
+var southWest = L.latLng(47.4714836, 0.5383301);
 var northEast = L.latLng(51.8900539, 6.3500977);
 var mapBox = L.latLngBounds(southWest, northEast);
 
@@ -134,14 +134,14 @@ var routing = function () {
     waypoints: [],
     routeWhileDragging: true,
     reverseWaypoints: true,
-    router: L.Routing.graphHopper('1d460f42-2220-4fcf-8eff-454cac1ae99f', {
+    router: L.Routing.graphHopper('d56e5232-0527-4c2c-96b4-4d47f5033039', {
         urlParameters: {
             vehicle: 'bike',
             locale: 'fr',
         }
     }),
-    geocoder: L.Control.Geocoder.bing('AtwDxrwRVqkTV73gq13SdD0qo7DQFYGRQT-WR0pPb0JS_eVLkKq2okV_MR2qLRlz'),
-    suggest: L.Control.Geocoder.bing('AtwDxrwRVqkTV73gq13SdD0qo7DQFYGRQT-WR0pPb0JS_eVLkKq2okV_MR2qLRlz')
+    geocoder: L.Control.Geocoder.bing('AgBpC0MhbICv_-KckfYMmXyrLsXh_br3nT4ukELm38l1QdJpJOehNkHkSL1hS8er'),
+    suggest: L.Control.Geocoder.bing('AgBpC0MhbICv_-KckfYMmXyrLsXh_br3nT4ukELm38l1QdJpJOehNkHkSL1hS8er')
   });
   
   function createButton(label, container) {

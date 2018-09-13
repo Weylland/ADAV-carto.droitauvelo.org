@@ -313,6 +313,6 @@ color: black;
 	left: 77vw;
 	bottom: 3.5vh;
 }
-.leaflet-interactive:hover {
+/* .leaflet-interactive:hover {
 	stroke-width: 10px;
-}
+} */

@@ -200,5 +200,6 @@ if __name__ == "__main__":
     minZoom = 10
     maxZoom = 16
     #bbox = (2.852, 50.524, 3.297, 50.813)
-    bbox = (1.46, 49.96, 4.24, 51.08)
+    #bbox = (1.46, 49.96, 4.24, 51.08)
+    bbox = (0.5383, 47.4715, 6.3501, 51.8901)
     render_tiles(bbox, mapfile, tile_dir, minZoom, maxZoom, "NPdC tiles")
