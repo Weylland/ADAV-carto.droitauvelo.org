@@ -55,7 +55,6 @@
 											</span>
 											<span class="texte">Couloir de bus partagé</span>
 										</li>
-										<!--<li><span class="image"><img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAFAQMAAACKM9XAAAAAA1BMVEUPYbL1r/KhAAAACklEQVQI12PABQAAGQAB5TSyfwAAAABJRU5ErkJggg=='></span><span class="texte">Double sens cyclable sans bande</span></li>-->
 										<li>
 											<span class="image">
 												<img src='src/img/premiere-legende/aire_pietonne_66ccff.png'>

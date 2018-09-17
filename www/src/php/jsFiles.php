@@ -9,36 +9,30 @@
 <script src="layer/pointsos.js"></script>
 <script src="layer/liaisons_points_durs_2017.js"></script>
 <script src="layer/travaux.js"></script>
-
+<!-- jquery file -->
 <script src="src/js/jquery-1.11.1.min.js"></script>
+<!-- File that contains the URLs to check for when loading the page -->
 <script src="src/js/config.js"></script>
 <!-- leaflet js files -->
 <script src="src/js/leaflet2.js"></script>
 <script src="src/js/leaflet-fullHash.js"></script>
-<!-- Leaflet marker cluster plugin
-<script src="src/js/leaflet.markercluster.js"></script>
-<script src="src/js/leaflet.markercluster.layersupport.js"></script> -->
-
 <!-- Leaflet print plugin -->
 <script src="src/js/leaflet.browser.print.js"></script> -->
 <!-- Leaflet search plugin-->
 <script src="leaflet-search/js/leaflet-search.js"></script>
-
 <!-- Leaflet sidebar plugin -->
 <script src="src/js/leaflet-sidebar.js"></script>
+<!-- Other -->
 <script src="src/js/leaflet.ajax.min.js"></script>
 <script src="src/js/bootstrap.min.js"></script>
 <script src="src/js/font-awesome.js"></script>
-
-<!-- Calculateur d'itinéraire bétâ -->
+<!-- Routing machine -->
 <script src="src/js/leaflet-routing-machine.js"></script>
 <script src="src/js/Control.Geocoder.js"></script>
 <script src="src/js/lrm-graphhopper.js"></script>
-
 <!-- Script Map -->
 <script src="src/js/layersCard.js" type="text/javascript"></script>
 <script src="src/js/map.js" type="text/javascript"></script>
-
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
