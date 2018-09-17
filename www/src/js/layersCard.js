@@ -275,7 +275,7 @@ var layersCard = function () {
         layers.bindPopup(route);
     }
     
-    var veloRoute = L.geoJSON(geojson_Veloroutes_regionales_decoupe_troncon_typevoie_itiAF3V_JS, {
+    L.geoJSON(geojson_Veloroutes_regionales_decoupe_troncon_typevoie_itiAF3V_JS, {
         style: function (features) {
             switch (features.properties.Type_voie) {
                 case '0': return { color: "#9B9995", dashArray: "1, 5"};
@@ -288,28 +288,6 @@ var layersCard = function () {
         },
         onEachFeature: onEachFeature,
     }).addTo(route);
-
-    var voieVerte;
-    for (var i = 0; i < geojson_Veloroutes_regionales_decoupe_troncon_typevoie_itiAF3V_JS.features.length; i++) {
-        voieVerte = geojson_Veloroutes_regionales_decoupe_troncon_typevoie_itiAF3V_JS.features[i].properties.nom_tit_af;
-    }
-    
-    function surbrillance(e) {
-        var objet = e.target;
-        objet.setStyle({
-            weight: 8
-        })
-    }
-    function resetsurbrillance(e){
-        var objet = e.target;
-        objet.setStyle({
-            weight: 3
-        })
-    }
-    veloRoute.on({
-        mouseover: surbrillance,
-        mouseout: resetsurbrillance
-    })
 
     //Travaux 
     function travauxx(features, layers) {

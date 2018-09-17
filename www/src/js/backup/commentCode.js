@@ -81,3 +81,25 @@
 //         .show();
 //     });
 // });
+// veloroute highlighting tests
+// var voieVerte;
+// for (var i = 0; i < geojson_Veloroutes_regionales_decoupe_troncon_typevoie_itiAF3V_JS.features.length; i++) {
+//     voieVerte = geojson_Veloroutes_regionales_decoupe_troncon_typevoie_itiAF3V_JS.features[i].properties.nom_tit_af;
+//     console.log(voieVerte)
+// }
+// function surbrillance(e) {
+//     var objet = e.target;
+//     objet.setStyle({
+//         weight: 8
+//     })
+// }
+// function resetsurbrillance(e){
+//     var objet = e.target;
+//     objet.setStyle({
+//         weight: 3
+//     })
+// }
+// veloRoute.on({
+//     mouseover: surbrillance,
+//     mouseout: resetsurbrillance
+// })
