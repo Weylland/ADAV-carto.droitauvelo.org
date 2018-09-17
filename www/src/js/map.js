@@ -25,8 +25,7 @@ var mbTiles = new L.tileLayer('https://carto.droitauvelo.org/mbtiles-server/mbti
   attribution: 'Équipement vélo <a href="https://www.droitauvelo.org" target="_blank">ADAV</a>',
   opacity: 0.7
 });
-
-
+// Layer
 var route = new L.LayerGroup();
 var gares = new L.LayerGroup();
 var magasinsport = new L.LayerGroup();
@@ -38,7 +37,6 @@ var sos = new L.LayerGroup();
 var points_durs = new L.LayerGroup();
 var travaux = new L.LayerGroup();
 // var itineraireadav = new L.LayerGroup();
-
 var baseLayers = {
   "Fond de carte grisé": OSMBlackWhite,
   "Fond de carte en couleur": OSMHumanity,
@@ -61,12 +59,11 @@ var overlays = {
   "Points durs référencés avec les collectivités partenaires": points_durs,
   // "ADAV itineraire": itineraireadav
 };
+// Bounding Box 
 var southWest = L.latLng(47.4714836, 0.5383301);
 var northEast = L.latLng(51.8900539, 6.3500977);
 var mapBox = L.latLngBounds(southWest, northEast);
-
 var map;
-
 var loadMap = function () {
   layersCard();
   // Layers controls 
@@ -74,7 +71,6 @@ var loadMap = function () {
   panelLayers.addTo(map);
   document.getElementById('fond').appendChild(panelLayers.onAdd(map));
   $("#fond").addClass("leaflet-control-layers-expanded")
-
   // Print
   L.control.browserPrint({
     printModes: [
@@ -83,7 +79,6 @@ var loadMap = function () {
       L.control.browserPrint.mode.custom("Personnalisé"),
     ]
   }).addTo(map);
-
   // FullHash
   var allMapLayers = {
     'grise': OSMBlackWhite,
@@ -103,10 +98,8 @@ var loadMap = function () {
     'zones_travaux': travaux
   };
   var hash = new L.Hash(map, allMapLayers);
-
   // Sidebar
   var sidebar = L.control.sidebar('sidebar').addTo(map);
-
   // Search 
   map.addControl(new L.Control.Search({
     url: 'https://nominatim.openstreetmap.org/search?format=json&q={s}',
@@ -120,7 +113,6 @@ var loadMap = function () {
     container: 'findbox',
     minLength: 2
   }));
-
   // Echelle //
   L.control.scale({
     metric: true,
@@ -128,7 +120,7 @@ var loadMap = function () {
     position: 'bottomright'
   }).addTo(map);  
 }
-
+// Routing
 var routing = function () {
   var control = L.Routing.control({
     waypoints: [],
@@ -143,17 +135,14 @@ var routing = function () {
     geocoder: L.Control.Geocoder.bing('AgBpC0MhbICv_-KckfYMmXyrLsXh_br3nT4ukELm38l1QdJpJOehNkHkSL1hS8er'),
     suggest: L.Control.Geocoder.bing('AgBpC0MhbICv_-KckfYMmXyrLsXh_br3nT4ukELm38l1QdJpJOehNkHkSL1hS8er')
   });
-  
   function createButton(label, container) {
     var btn = L.DomUtil.create('button', '', container);
     btn.setAttribute('type', 'button');
     btn.innerHTML = label;
     return btn;
   }
-
   var removeRoute = document.getElementById("removeRoute");
   var addRoute = document.getElementById("addRoute");
-
   var addRouteF = function () {
     control.addTo(map);
     addRoute.style.display = "none";
@@ -162,35 +151,29 @@ var routing = function () {
       var container = L.DomUtil.create('div'),
           startBtn = createButton('Départ', container),
           destBtn = createButton('Arrivée', container);
-    
       L.DomEvent.on(startBtn, 'click', function() {
           control.spliceWaypoints(0, 1, e.latlng);
           map.closePopup();
       });
-      
       L.DomEvent.on(destBtn, 'click', function() {
           control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
           map.closePopup();
       });
-    
       L.popup()
           .setContent(container)
           .setLatLng(e.latlng)
           .openOn(map);
     });
   }
-  
   var removeRouteF = function () {
     control.remove(map);
     removeRoute.style.display = "none";
     addRoute.style.display = "block";
     map.off('click');
   }
-
   addRoute.addEventListener("click", addRouteF);
   removeRoute.addEventListener("click", removeRouteF);
 }
-
 var generateMapSucess  = function(position) {
   map = new L.Map("map", {
     zoom: 14,
@@ -213,7 +196,6 @@ var generateMapFailure = function(error) {
   loadMap();
   routing();
 }
-
 if (localhostUrl) {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
