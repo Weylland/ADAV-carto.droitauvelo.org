@@ -65,14 +65,17 @@ amenities = Points(
 	    "bicycle_parking",
 	    "bicycle_rental",
         ),
-	'bicycle_parking': ( 'shed', 'building', )
+	'bicycle_parking': ( 'shed', 'building'),
+	'railway': ('halt', 'station')
 	},
 	fields = (
 		('access', String()),
 		('bicycle_parking', String()),
 		('operator', String()),
 		('barrier', String()),
-		('cycleway', String())
+		('cycleway', String()),
+		('railway', String()),
+		('network', String())
 	),
 )
 
@@ -83,13 +86,14 @@ amenitiesbuilding = Polygons(
 	    "bicycle_parking",
 	    "bicycle_rental",
         ),
-	'bicycle_parking': ( 'shed', 
-    'building', ),
+	'bicycle_parking': ( 'shed', 'building' ),
+	'railway': ('halt', 'station')
 	},
 	fields = (
 		('access', String()),
 		('bicycle_parking', String()),
 		('operator', String()),
+		('railway', String())
 	),
 )
 
@@ -119,6 +123,8 @@ equipements = LineStrings(
 		    'share_busway',
 		    'shared_lane',
 		    'sharrow',
+			'sidewalk',
+			'asl'
 		    ),
 	    'cycleway:left': (
 		    'lane',    
@@ -130,47 +136,52 @@ equipements = LineStrings(
 		    'share_busway',
 		    'shared_lane',
 		    'sharrow',
+			'sidewalk'
 		    ),
 	    'cycleway:right': (
-			    'lane',    
-			    'track',    
-			    'opposite_lane',   
-			    'opposite_track',  
-			    'opposite',
-			    'shared',
-			    'share_busway',
-			    'shared_lane',
-			    'sharrow',
-			    ),
+			'lane',    
+			'track',    
+			'opposite_lane',   
+			'opposite_track',  
+			'opposite',
+			'shared',
+			'share_busway',
+			'shared_lane',
+			'sharrow',
+			'sidewalk'
+		),
 		'bicycle': ('yes','designated',),
 		'highway': ('pedestrian','cycleway','footway','living_street','track', 'service'),
 		'oneway:bicycle' : ('no','yes','-1','1',),
 		'route' : ('bicycle'),
 		'network' : ('lcn','rcn','ncn',),
 		'maxspeed': ('20','30'),
-		'operator': ('VNF')
+		'operator': ('VNF'),
+		'footway': ('crossing')
         },
     fields = (
-			('cycleway', String()),
-			('cycleway:left', String()),
-			('cycleway:right', String()),
-			('tracktype', String()),
-			('foot', String()),
-			('bicycle', String()),
-			('oneway', Direction()),
-			('oneway:bicycle', Direction()),
-			('access', String()),
-			('highway', String()),
-			('surface', String()),
-			('name', String()),
-			('maxspeed', Integer()),
-			('route', String()),
-			('network', String()),
-			('area', String()),
-			('railway', String()),
-			('operator', String()),
-			('motor_vehicle', String())
-        ),
+		('cycleway', String()),
+		('cycleway:left', String()),
+		('cycleway:right', String()),
+		('tracktype', String()),
+		('foot', String()),
+		('bicycle', String()),
+		('oneway', Direction()),
+		('oneway:bicycle', Direction()),
+		('access', String()),
+		('highway', String()),
+		('surface', String()),
+		('name', String()),
+		('maxspeed', Integer()),
+		('route', String()),
+		('network', String()),
+		('area', String()),
+		('railway', String()),
+		('operator', String()),
+		('motor_vehicle', String()),
+		('footway', String()),
+		('barrier', String()),
+	),
 )
 
 networks = Polygons(
