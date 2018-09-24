@@ -9,8 +9,13 @@
 <script src="layer/pointsos.js"></script>
 <script src="layer/liaisons_points_durs_2017.js"></script>
 <script src="layer/travaux.js"></script>
+<script src="layer/180919_VLS_HDF.js"></script>
 <!-- jquery file -->
-<script src="src/js/jquery-1.11.1.min.js"></script>
+<script src="src/js/jquery-3.3.1.min.js"></script>
+<!-- popper -->
+<!-- <script src="src/js/popper.min.js"></script> -->
+<!-- bootstrap -->
+<script src="src/js/bootstrap.min.js"></script>
 <!-- File that contains the URLs to check for when loading the page -->
 <script src="src/js/config.js"></script>
 <!-- leaflet js files -->
@@ -24,8 +29,7 @@
 <script src="src/js/leaflet-sidebar.js"></script>
 <!-- Other -->
 <script src="src/js/leaflet.ajax.min.js"></script>
-<script src="src/js/bootstrap.min.js"></script>
-<script src="src/js/font-awesome.js"></script>
+<script src="src/js/font-awesome.min.js"></script>
 <!-- Routing machine -->
 <script src="src/js/leaflet-routing-machine.js"></script>
 <script src="src/js/Control.Geocoder.js"></script>

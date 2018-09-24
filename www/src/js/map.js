@@ -36,6 +36,7 @@ var locationvelo = new L.LayerGroup();
 var sos = new L.LayerGroup();
 var points_durs = new L.LayerGroup();
 var travaux = new L.LayerGroup();
+var vls = new L.LayerGroup();
 // var itineraireadav = new L.LayerGroup();
 var baseLayers = {
   "Fond de carte grisé": OSMBlackWhite,
@@ -57,7 +58,7 @@ var overlays = {
   "Magasins d'articles de sport": magasinsport,
   "Passage inaccessible pour cause de travaux": travaux,
   "Points durs référencés avec les collectivités partenaires": points_durs,
-  // "ADAV itineraire": itineraireadav
+  "Vélos en libre-service": vls
 };
 // Bounding Box 
 var southWest = L.latLng(47.4714836, 0.5383301);
@@ -95,7 +96,8 @@ var loadMap = function () {
     'sos_velo': sos,
     'points_durs': points_durs,
     'amenagements_cyclables': mbTiles,
-    'zones_travaux': travaux
+    'zones_travaux': travaux,
+    'vls': vls
   };
   var hash = new L.Hash(map, allMapLayers);
   // Sidebar

@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="src/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="leaflet-search/css/leaflet-search.css" />
 	<link rel="stylesheet" href="src/css/leaflet-routing-machine.css" />
-	<link rel="stylesheet" href="src/css/font-awesome.css">
+	<link rel="stylesheet" href="src/css/font-awesome.min.css">
 	<link rel="stylesheet" href="src/css/leaflet-sidebar.css" />
 	<!--<link rel="stylesheet" type="text/css" media="screen" href="src/css/MarkerCluster.css" />-->
 	<link rel="stylesheet" type="text/css" media="screen" href="src/css/style.css" />
@@ -249,33 +249,45 @@
 				</li>
 				<li>
 					<a href="#profile" role="tab" alt="Couche de carte" title="Couche de carte">
-						<i class="fa fa-file"></i>
+						<!-- <i class="fas fa-map-marked-alt"></i> -->
+						<i class="fas fa-map-marked-alt"></i>
 					</a>
 				</li>
-				<li>
-					<a id="showLegend" data-toggle="modal" data-target="#myModal" alt="Légendes" title="Légendes">
-						<i class="fa fa-info"></i>
-					</a>
-					<a id="hideLegend" data-toggle="modal" data-target="#myModal" alt="Légendes" title="Légendes">
+				<li class="cursorHover">
+					<a id="Legend" data-toggle="modal" data-target="#myModal" alt="Légendes" title="Légendes">
 						<i class="fa fa-info"></i>
 					</a>
 				</li>
-				<li>
+				<li class="cursorHover">
 					<a id="addRoute" role="tab" alt="Calculateur d'itinéraire" title="Calculateur d'itinéraire">
-						<i class="fa fa-road" ></i>
+						<!-- <i class="fa fa-road" ></i> -->
+						<i class="fas fa-route"></i>
 					</a>
 					<a id="removeRoute" role="tab" alt="Calculateur d'itinéraire" title="Calculateur d'itinéraire">
-						<i class="fa fa-road" ></i>
+						<!-- <i class="fa fa-road" ></i> -->
+						<i class="fas fa-route"></i>
 					</a>
 				</li>
 				<li>
 					<a href="#recherche" role="tab" alt="Recherche" title="Recherche">
-						<i class="fa fa-search"></i>
+						<!-- <i class="fa fa-search"></i> -->
+						<i class="fas fa-search-location"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#osm" role="tab" alt="Openstreetmap" title="Openstreetmap">
+						<img src="src/img/OSM-logo.png" alt="Logo openstreetmap" style="width: 30px;">
+					</a>
+				</li>
+				<li>
+					<a href="#cyclabilite" role="tab" alt="Cyclabilité" title="Cyclabilité">
+						<i class="fas fa-bicycle"></i>
 					</a>
 				</li>
 				<li>
 					<a href="#partenaires" role="tab" alt="Nos partenaires" title="Nos partenaires">
-						<i class="fa fa-users"></i>
+						<!-- <i class="fa fa-users"></i> -->
+						<i class="fas fa-handshake"></i>
 					</a>
 				</li>
 			</ul>
@@ -287,7 +299,7 @@
 				<h1 class="sidebar-header">
 					<a href="http://droitauvelo.org" target="_blank" style="color: white;">ADAV</a> - Droit au vélo
 					<span class="sidebar-close">
-						<i class="fa fa-close"></i>
+						<i class="fas fa-times"></i>
 					</span>
 				</h1>
 				<p class="lorem">
@@ -301,11 +313,12 @@
 					sécurité des cyclistes et les représente dans le Nord et le Pas-de-Calais.
 					<br>
 					<br>
-					<a href="http://droitauvelo.org">
+					<a href="http://droitauvelo.org" target="_blank">
 						<p align="center">
 							<img class="img-responsive" src="src/img/adav.jpg" alt="ADAV" />
 						</p>
 					</a>
+					<center><a href="http://droitauvelo.org" target="_blank">droitauvelo.org</a></center>
 					<br>
 					<br>
 					<b>
@@ -341,21 +354,6 @@
 							<b>Le réseau des antennes de l’ADAV.</b>
 						</li>
 					</ul>
-					<br>
-					<h2>
-						<center>Contribuez à Openstreetmap</center>
-					</h2>
-					<br> Les données sont issus du projet issues de la base de données libres et mondiales
-					<a href="https://www.openstreetmap.org/#map=7/49.983/2.813" target="_blank">d'Openstreetmap.org</a> auquel vous pouvez contribuez afin d’enrichir cette carte.
-					<br>
-					<br>
-					<a href="https://openstreetmap.fr/">
-						<img class="img-responsive" src="src/img/openstreetmap.jpg" alt="OSM" />
-					</a>
-					<br>
-					<br>
-					<a href="https://droitauvelo.org/Carte-des-amenagements-cyclables" target="_blank">Plus d'information sur cette carte et sur les contributions Openstreetmap </a>
-					<br>
 					<br> Le linéraire de véloroute voie verte est issus des données de la région Haut-de-France, modifié par l’ADAV – Droit
 					au vélo, comme le permet la licence ODbL.
 					<a href="https://www.data.gouv.fr/fr/datasets/les-veloroutes-et-voies-vertes-en-nord-pas-de-calais-npc/" target="_blank">Télécharger les données</a>
@@ -373,7 +371,7 @@
 			<div class="sidebar-pane" id="profile">
 				<h1 class="sidebar-header">Cartes
 					<span class="sidebar-close">
-						<i class="fa fa-close"></i>
+						<i class="fas fa-times"></i>
 					</span>
 				</h1>
 				<br>
@@ -391,7 +389,7 @@
 			<div class="sidebar-pane" id="itineraire">
 				<h1 class="sidebar-header">Calculateur d'itinéraire (Bêta version)
 					<span class="sidebar-close">
-						<i class="fa fa-close"></i>
+						<i class="fas fa-times"></i>
 					</span>
 				</h1>
 				<br>
@@ -400,7 +398,7 @@
 			<div class="sidebar-pane" id="recherche">
 				<h1 class="sidebar-header">Rechercher une localité
 					<span class="sidebar-close">
-						<i class="fa fa-close"></i>
+						<i class="fas fa-times"></i>
 					</span>
 				</h1>
 				<br>
@@ -415,7 +413,7 @@
 			<div class="sidebar-pane" id="partenaires">
 				<h1 class="sidebar-header">Nos partenaires
 					<span class="sidebar-close">
-						<i class="fa fa-close"></i>
+						<i class="fas fa-times"></i>
 					</span>
 				</h1>
 				<br>
@@ -453,13 +451,27 @@
 					</div>
 				</div>
 			</div>
-			<div class="sidebar-pane" id="impressions">
-				<h1 class="sidebar-header">Imprimer la Cartes
+			<div class="sidebar-pane" id="osm">
+				<h1 class="sidebar-header">
+					Openstreetmap
 					<span class="sidebar-close">
-						<i class="fa fa-close"></i>
+						<i class="fas fa-times"></i>
 					</span>
 				</h1>
-				<button id='leaflet-browser-print--manualMode-button' type"button" class="btn" onclick="printPortrait();">Portrait</button>
+				<p class="lorem">
+						<h2><center>Contribuez à Openstreetmap</center></h2>
+					<br> Les données sont issus du projet issues de la base de données libres et mondiales
+					<a href="https://www.openstreetmap.org/#map=7/49.983/2.813" target="_blank">d'Openstreetmap.org</a> auquel vous pouvez contribuez afin d’enrichir cette carte.
+					<br>
+					<br>
+					<a href="https://openstreetmap.fr/">
+						<img class="img-responsive" src="src/img/openstreetmap.jpg" alt="OSM" />
+					</a>
+					<br>
+					<br>
+					<a href="https://droitauvelo.org/Carte-des-amenagements-cyclables" target="_blank">Plus d'information sur cette carte et sur les contributions Openstreetmap </a>
+					<br>
+				</p>
 			</div>
 		</div>
 		<!-- js files -->
