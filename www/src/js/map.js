@@ -58,7 +58,7 @@ var overlays = {
   "Magasins d'articles de sport": magasinsport,
   "Passage inaccessible pour cause de travaux": travaux,
   "Points durs référencés avec les collectivités partenaires": points_durs,
-  "Vélos en libre-service": vls
+  //"Vélos en libre-service": vls
 };
 // Bounding Box 
 var southWest = L.latLng(47.4714836, 0.5383301);
@@ -180,7 +180,7 @@ var generateMapSucess  = function(position) {
   map = new L.Map("map", {
     zoom: 14,
     center: [position.coords.latitude, position.coords.longitude],
-    layers: [hillShade, OSMBlackWhite, route],
+    layers: [hillShade, OSMBlackWhite, route, mbTiles],
     maxBounds: mapBox,
     minZoom: 9
   });
@@ -191,7 +191,7 @@ var generateMapFailure = function(error) {
   map = new L.Map("map", {
     zoom: 9,
     center: [50.6146, 3.0652],
-    layers: [hillShade, OSMBlackWhite, route],
+    layers: [hillShade, OSMBlackWhite, route, mbTiles],
     maxBounds: mapBox,
     minZoom: 9
   });
@@ -208,7 +208,7 @@ if (localhostUrl) {
     map = new L.Map("map", {
       zoom: 9,
       center: [50.6146, 3.0652],
-      layers: [hillShade, OSMBlackWhite, route],
+      layers: [hillShade, OSMBlackWhite, route, mbTiles],
       maxBounds: mapBox,
       minZoom: 9
     });

@@ -66,7 +66,8 @@ amenities = Points(
 	    "bicycle_rental",
         ),
 	'bicycle_parking': ( 'shed', 'building'),
-	'railway': ('halt', 'station')
+	'railway': ('halt', 'station'),
+	'barrier': ('cycle_barrier')
 	},
 	fields = (
 		('access', String()),

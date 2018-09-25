@@ -357,46 +357,46 @@ var layersCard = function () {
         onEachFeature: points_durss,
     }).addTo(points_durs);
 
-    //vls
-    function vlss(features, layers) {
-        var strVar = "";
-        strVar += "<div class=\"container\">";
-        strVar += "	<div class=\"row\">";
-        strVar += "    	<div class=\"col-sm-3\">";
-        strVar += "            <div class=\"card\">";
-        strVar += "                <div class=\"card-block\">";
-        strVar += "                    <h4 class=\"card-title\">" + features.properties.name + "<\/h4>";
-        strVar += "                <\/div>";
-        strVar += "            <\/div>";
-        strVar += "        <\/div>";
-        strVar += "	<\/div> <!-- row -->";
-        strVar += "<\/div> <!-- c";
-        layers.bindPopup(strVar);
-    }
+    // //vls
+    // function vlss(features, layers) {
+    //     var strVar = "";
+    //     strVar += "<div class=\"container\">";
+    //     strVar += "	<div class=\"row\">";
+    //     strVar += "    	<div class=\"col-sm-3\">";
+    //     strVar += "            <div class=\"card\">";
+    //     strVar += "                <div class=\"card-block\">";
+    //     strVar += "                    <h4 class=\"card-title\">" + features.properties.name + "<\/h4>";
+    //     strVar += "                <\/div>";
+    //     strVar += "            <\/div>";
+    //     strVar += "        <\/div>";
+    //     strVar += "	<\/div> <!-- row -->";
+    //     strVar += "<\/div> <!-- c";
+    //     layers.bindPopup(strVar);
+    // }
 
-    L.geoJSON(json_180919_VLS_HDF, {
-        style: function (features) {
-            return features.properties;
-        },
-        onEachFeature: vlss,
-        pointToLayer: function (features, latlng) {
-            if (features.properties.vending === "yes") {
-                var smallIcon = new L.Icon({
-                    iconUrl: 'src/img/deuxieme-legende/images-layer/VLS_cb.png',
-                    iconSize: [28, 28]
-                });
-                return L.marker(latlng, {
-                    icon: smallIcon
-                });
-            } else {
-                var smallIcon = new L.Icon({
-                    iconUrl: 'src/img/deuxieme-legende/images-layer/VLS_no_cb.png',
-                    iconSize: [28, 28]
-                });
-                return L.marker(latlng, {
-                    icon: smallIcon
-                });
-            }
-        }
-    }).addTo(vls);
+    // L.geoJSON(json_180919_VLS_HDF, {
+    //     style: function (features) {
+    //         return features.properties;
+    //     },
+    //     onEachFeature: vlss,
+    //     pointToLayer: function (features, latlng) {
+    //         if (features.properties.vending === "yes") {
+    //             var smallIcon = new L.Icon({
+    //                 iconUrl: 'src/img/deuxieme-legende/images-layer/VLS_cb.png',
+    //                 iconSize: [28, 28]
+    //             });
+    //             return L.marker(latlng, {
+    //                 icon: smallIcon
+    //             });
+    //         } else {
+    //             var smallIcon = new L.Icon({
+    //                 iconUrl: 'src/img/deuxieme-legende/images-layer/VLS_no_cb.png',
+    //                 iconSize: [28, 28]
+    //             });
+    //             return L.marker(latlng, {
+    //                 icon: smallIcon
+    //             });
+    //         }
+    //     }
+    // }).addTo(vls);
 }

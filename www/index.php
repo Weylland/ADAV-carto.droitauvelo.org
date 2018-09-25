@@ -459,9 +459,15 @@
 					</span>
 				</h1>
 				<p class="lorem">
-						<h2><center>Contribuez à Openstreetmap</center></h2>
-					<br> Les données sont issus du projet issues de la base de données libres et mondiales
-					<a href="https://www.openstreetmap.org/#map=7/49.983/2.813" target="_blank">d'Openstreetmap.org</a> auquel vous pouvez contribuez afin d’enrichir cette carte.
+					<h2><center>Contribuez à Openstreetmap</center></h2>
+					<br> 
+					Les fonds de cartes ainsi que les informations proviennent en majeur partie <a href="https://www.openstreetmap.org/#map=7/49.983/2.813" target="_blank">d'Openstreetmap.org</a>, le wikipédia de la cartographie : un projet collaboratif mondial qui permet de créer une base de donnée géographique libre (sous license ODbL), complétée par des contributeurs locaux connaissant le territoire.
+					<br>
+					<br>
+					Droit au Vélo contribue activement pour en améliorer les informations relatives aux aménagements cyclables.
+					<br>
+					<br>
+					Il manque une bande cyclable, un stationnement vélo ou d’autres éléments relative au vélo? Ajoutez-les dans Openstreetmap.org ou signalez-le nous ! <a href="mailto:mathias.vadot@droitauvelo.org">(mathias.vadot@droitauvelo.org)</a>
 					<br>
 					<br>
 					<a href="https://openstreetmap.fr/">
@@ -469,8 +475,49 @@
 					</a>
 					<br>
 					<br>
-					<a href="https://droitauvelo.org/Carte-des-amenagements-cyclables" target="_blank">Plus d'information sur cette carte et sur les contributions Openstreetmap </a>
+					<a href="https://droitauvelo.org/Carte-des-amenagements-cyclables" target="_blank">Plus d'informations sur le site de Droit au Vélo  </a>
 					<br>
+					<br><a href="https://wiki.openstreetmap.org/wiki/FR:Bicycle" target="_blank">Plus d’information sur les éléments liés au vélo dans Openstreetmap.org</a>
+				</p>
+			</div>
+			<div class="sidebar-pane" id="cyclabilite">
+				<h1 class="sidebar-header">
+					Cyclabilité
+					<span class="sidebar-close">
+						<i class="fas fa-times"></i>
+					</span>
+				</h1>
+				<p class="lorem">
+					<h2><center>Contribuez à la carte de cyclabilité !</center></h2>
+					<br><br>
+					L’ADAV a initié un projet de cartographie de la cyclabilité des Hauts-de-France : une carte collaborative permettant aux cyclistes de noter l’accessibilité des routes en fonction de leurs expériences et ressenties.
+					<br><br>
+					<center><a href="https://cyclabilite.droitauvelo.org/" target="_blank">https://cyclabilite.droitauvelo.org/</a></center>
+					<br><br>
+					<center><a href="https://cyclabilite.droitauvelo.org/" target="_blank"><img class="img-responsive" src="src/img/cyclabilite_bandeau.jpg" alt="Bandeau cyclabilité"></a></center>
+					<br><br>
+					L’objectif est d’avoir une meilleure vue d’ensemble du territoire à vélo et d’obtenir plus d’information que la seule présence d’aménagements cyclables, parfois peu nombreux, afin de conseiller au mieux les autres cyclistes. 
+					<br><br>
+					Dans les faits, une voie sans aménagements cyclables peut être agréable à vélo dans le cas où :
+					<br><br>
+					<ul>
+						<li>La densité du trafic et la vitesse des automobilistes sont réduits</li>
+						<li>La voie constitue un raccourcie intéressant</li>
+					</ul>
+					<br>
+					Au contraire, une voie aménagée peut être déconseillée à vélo :
+					<br><br>
+					<ul>
+						<li>Si l’aménagement n’est pas adapté à la situation</li>
+						<li>Le revêtement de ce dernier est fortement abimé</li>
+					</ul>
+					<br><br>
+					<img class="img-responsive" src="src/img/cyclisteAB.jpg" alt="Image qui représente les rues agréable et désagréable à vélo.">
+					<br><br>
+					Qui mieux que le cycliste lui même pour connaitre et partager ces informations ?
+					<br><br>
+					Hauts-de-France Mobilité utilisera prochainement ces informations, pour alimenter son calculateur d’itinéraire intermodale, sur <a href="https://www.passpass.fr/" target="_blank">passpass.fr</a>.
+					<br><br>
 				</p>
 			</div>
 		</div>
