@@ -99,9 +99,15 @@
 										</li>
 										<li>
 											<span class="image">
-												<img src='src/img/premiere-legende/station_velo_v.png' />
+												<img src='src/img/premiere-legende/VLS_cb.png' />
 											</span>
-											<span class="texte">Station vélo libre service</span>
+											<span class="texte">Station vélo libre service avec paiement par carte bancaire</span>
+										</li>
+										<li>
+											<span class="image">
+												<img src='src/img/premiere-legende/VLS_no_cb.png' />
+											</span>
+											<span class="texte">Station vélo libre service sans paiement par carte bancaire</span>
 										</li>
 									</ul>
 								</div>
@@ -249,7 +255,6 @@
 				</li>
 				<li>
 					<a href="#profile" role="tab" alt="Couche de carte" title="Couche de carte">
-						<!-- <i class="fas fa-map-marked-alt"></i> -->
 						<i class="fas fa-map-marked-alt"></i>
 					</a>
 				</li>
@@ -260,17 +265,14 @@
 				</li>
 				<li class="cursorHover">
 					<a id="addRoute" role="tab" alt="Calculateur d'itinéraire" title="Calculateur d'itinéraire">
-						<!-- <i class="fa fa-road" ></i> -->
 						<i class="fas fa-route"></i>
 					</a>
 					<a id="removeRoute" role="tab" alt="Calculateur d'itinéraire" title="Calculateur d'itinéraire">
-						<!-- <i class="fa fa-road" ></i> -->
 						<i class="fas fa-route"></i>
 					</a>
 				</li>
 				<li>
 					<a href="#recherche" role="tab" alt="Recherche" title="Recherche">
-						<!-- <i class="fa fa-search"></i> -->
 						<i class="fas fa-search-location"></i>
 					</a>
 				</li>
@@ -286,7 +288,6 @@
 				</li>
 				<li>
 					<a href="#partenaires" role="tab" alt="Nos partenaires" title="Nos partenaires">
-						<!-- <i class="fa fa-users"></i> -->
 						<i class="fas fa-handshake"></i>
 					</a>
 				</li>

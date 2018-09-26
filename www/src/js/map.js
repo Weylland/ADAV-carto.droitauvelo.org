@@ -58,7 +58,7 @@ var overlays = {
   "Magasins d'articles de sport": magasinsport,
   "Passage inaccessible pour cause de travaux": travaux,
   "Points durs référencés avec les collectivités partenaires": points_durs,
-  //"Vélos en libre-service": vls
+  "Vélos en libre-service": vls
 };
 // Bounding Box 
 var southWest = L.latLng(47.4714836, 0.5383301);

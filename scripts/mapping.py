@@ -62,12 +62,12 @@ amenities = Points(
     name='amenities',
     mapping = {
         'amenity': (
-	    "bicycle_parking",
-	    "bicycle_rental",
+	    	"bicycle_parking",
+	    	"bicycle_rental",
         ),
-	'bicycle_parking': ( 'shed', 'building'),
-	'railway': ('halt', 'station'),
-	'barrier': ('cycle_barrier')
+		'bicycle_parking': ( 'shed', 'building'),
+		'railway': ('halt', 'station'),
+		'barrier': ("cycle_barrier")
 	},
 	fields = (
 		('access', String()),
