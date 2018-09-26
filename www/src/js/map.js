@@ -9,7 +9,7 @@ var OSMBlackWhite = new L.TileLayer("https://{s}.tile.openstreetmap.se/hydda/ful
 var OSMHumanity = new L.TileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
   attribution: 'Tuiles de fond <a href="https://www.openstreetmap.org/" target="_blank">OSM.org</a>',
 });
-var OSMCycleMap = new L.TileLayer("https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png", {
+var OSMCycleMap = new L.TileLayer("https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=9c543a4c17a446bc808b06b3b17f1db5", {
   attribution: 'Tuiles de fond <a href="https://www.opencyclemap.org" target="_blanck">OpenCycleMap.org</a> (⚠ logiciel propriétaire)',
 });
 var elevation = new L.tileLayer("https://{s}.tile.cartosm.eu/tile/isohypse/{z}/{x}/{y}.png", {
