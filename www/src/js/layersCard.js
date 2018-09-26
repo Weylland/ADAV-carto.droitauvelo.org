@@ -1,36 +1,36 @@
 var layersCard = function () {
     // Gares //
-    function Gares(features, layers) {
-        var strVar = "";
-        strVar += "<div class=\"container\">";
-        strVar += "     <div class=\"row\">";
-        strVar += "     <div class=\"col-sm-3\">";
-        strVar += "            <div class=\"card\">";
-        strVar += "                <div class=\"card-block\">";
-        strVar += "                    <h4 class=\"card-title\">" + features.properties.NOMGARE + "<\/h4>";
-        strVar += "                <\/div>";
-        strVar += "            <\/div>";
-        strVar += "        <\/div>";
-        strVar += "        <\/div>";
-        strVar += "<\/div>";
-        layers.bindPopup(strVar);
-    }
+    // function Gares(features, layers) {
+    //     var strVar = "";
+    //     strVar += "<div class=\"container\">";
+    //     strVar += "     <div class=\"row\">";
+    //     strVar += "     <div class=\"col-sm-3\">";
+    //     strVar += "            <div class=\"card\">";
+    //     strVar += "                <div class=\"card-block\">";
+    //     strVar += "                    <h4 class=\"card-title\">" + features.properties.NOMGARE + "<\/h4>";
+    //     strVar += "                <\/div>";
+    //     strVar += "            <\/div>";
+    //     strVar += "        <\/div>";
+    //     strVar += "        <\/div>";
+    //     strVar += "<\/div>";
+    //     layers.bindPopup(strVar);
+    // }
 
-    L.geoJSON(geojson_GARES_RESEAU_TER, {
-        style: function (features) {
-            return features.properties;
-        },
-        onEachFeature: Gares,
-        pointToLayer: function (features, latlng) {
-            var smallIcon = new L.Icon({
-                iconUrl: 'src/img/deuxieme-legende/legende_Gare_SNCF_petit_49.png',
-                iconSize: [32, 20]
-            });
-            return L.marker(latlng, {
-                icon: smallIcon
-            });
-        }
-    }).addTo(gares);
+    // L.geoJSON(geojson_GARES_RESEAU_TER, {
+    //     style: function (features) {
+    //         return features.properties;
+    //     },
+    //     onEachFeature: Gares,
+    //     pointToLayer: function (features, latlng) {
+    //         var smallIcon = new L.Icon({
+    //             iconUrl: 'src/img/deuxieme-legende/legende_Gare_SNCF_petit_49.png',
+    //             iconSize: [32, 20]
+    //         });
+    //         return L.marker(latlng, {
+    //             icon: smallIcon
+    //         });
+    //     }
+    // }).addTo(gares);
 
     // Magasin sport //
     function MagasinSport(features, layers) {
@@ -366,6 +366,9 @@ var layersCard = function () {
         strVar += "            <div class=\"card\">";
         strVar += "                <div class=\"card-block\">";
         strVar += "                    <h4 class=\"card-title\">" + features.properties.name + "<\/h4>";
+        strVar += "                    <p><b>" + features.properties.network + "</b></p>";
+        strVar += "                    <p>Capacité : <b>" + features.properties.capacity + "</b></p>";
+        // strVar += "                    <img class=\"img-responsive img-troncon center-block\" src=\" " + features.properties.image + " \" alt=\"Card image cap\">";
         strVar += "                <\/div>";
         strVar += "            <\/div>";
         strVar += "        <\/div>";

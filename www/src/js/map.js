@@ -49,7 +49,7 @@ var overlays = {
   "Véloroutes et voies vertes de la région": route,
   // "Ombrage du relief": hillShade,
   // "Courbes de niveau": elevation,
-  "Gares et haltes ferroviaires": gares,
+  // "Gares et haltes ferroviaires": gares,
   "Abris à vélo, sécurisés": abrivelo,
   "Antennes de l'ADAV - Droit au vélo": antennesadav,
   "Points SOS vélo ( Kit de réparation en libre service )": sos,
